@@ -1,0 +1,77 @@
+.identitas{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;    
+}
+.img-logo{
+    width: 10px;
+}
+nav{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.sidebar-brand{
+    margin-top: 20px;
+}
+.sidebar-nav{
+    height: 720px;
+}
+
+.nav-item, .nav-link{
+    color: white;
+}
+.table-dashboard{
+    margin-top: 20px;
+}
+.table-title{
+    background-color: #B3D9F4;
+}
+.sidebar-heading{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.nav-brand{
+    margin-left: 16px;
+}
+.name-brand{
+    font-size: 32px;
+    color: #333333;
+}
+.content-brand{
+    margin-top: 20px;
+}
+.card-task{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 250px;
+}
+.card-header{
+    font-size: 20px;
+    font-weight: 700;
+}
+.task{
+    margin-top: 20px;
+}
+.card-title{
+    font-size: 16px;
+    font-weight: 700;
+}
+.card-brief{
+    width: 600px;
+}
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
