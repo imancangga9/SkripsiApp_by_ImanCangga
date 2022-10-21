@@ -17,6 +17,6 @@ class Packaging extends Model
     
     public function produks()
     {
-        return $this->belongsTo('App\Models\Produk');
+        return $this->belongsTo('App\Models\Produk', 'id_produk');
     }
 }

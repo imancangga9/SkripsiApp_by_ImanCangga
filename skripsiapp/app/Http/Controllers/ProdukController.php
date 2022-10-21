@@ -23,12 +23,14 @@ class ProdukController extends Controller
     }
 
     public function show($slug){
+        $packagings = Packaging::all();
+
         $produk = Produk::where('slug', $slug)->first();
 
         if($produk == null)
             abort(404);
 
-        return view('produk.show', compact('produk'));
+        return view('produk.show', compact('produk', 'packagings'));
     }
 
     
@@ -103,7 +105,7 @@ class ProdukController extends Controller
 
     public function packaging(){
         $packagings = Packaging::all();
-        // return view('packaging.packaging', ['packaging' => $packaging]);
+        
         return view('packaging.packaging', compact('packagings'));
         
     }

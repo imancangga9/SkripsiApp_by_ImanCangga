@@ -14,7 +14,7 @@ class Produk extends Model
     protected $guarded = ['id_produk'];
 
     protected $table = "produks";
-    protected $fillable = ["id_produk", "nama_produk", "slug",  "netto_produk", "status_produk", "id_brand", "updated_at", "`created_at"];
+    protected $fillable = ["id_produk", "nama_produk", "slug",  "netto_produk", "status_produk", "id_brand", "updated_at", "created_at"];
    
     public function brands()
     {
@@ -28,6 +28,6 @@ class Produk extends Model
 
     public function packagings()
     {
-        return $this->hasOne('App\Models\Packaging');
+        return $this->hasOne('App\Models\Packaging', 'id_packaging');
     }
 }
