@@ -13,7 +13,7 @@ class Packaging extends Model
     protected $guarded = ['id_packaging'];
     // protected $fillable = ['id_packaging', 'jenis_packaging', 'slug',  'warna_packaging', 'status_packaging','foto_packaging', 'id_produk', 'updated_at', 'created_at'];
    
-    protected $fillable = ['id_packaging', 'jenis_packaging', 'slug',  'warna_packaging', 'id_produk', 'updated_at', 'created_at'];
+    // protected $fillable = ['id_packaging', 'jenis_packaging', 'slug',  'warna_packaging', 'id_produk', 'status_packaging', 'updated_at', 'created_at'];
     
     public function produks()
     {

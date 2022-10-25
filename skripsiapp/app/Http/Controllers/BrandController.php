@@ -20,12 +20,14 @@ class BrandController extends Controller
     }
 
     public function show($slug){
+        $produks = Produk::all();
+        
         $brand = Brand::where('slug', $slug)->first();
         // $brand = Brand::find($id_brand);
         if($brand == null)
             abort(404);
 
-        return view('aplikasi.show', compact('brand'));
+        return view('aplikasi.show', compact('brand', 'produks'));
     }
 
     

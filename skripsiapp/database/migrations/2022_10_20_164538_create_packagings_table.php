@@ -18,8 +18,8 @@ class CreatePackagingsTable extends Migration
             $table->string('jenis_packaging');
             $table->string('slug');   
             $table->string('warna_packaging');
-            // $table->string('status_packaging');
-            // $table->string('foto_packaging');
+            $table->string('status_packaging');
+            $table->string('foto_packaging');
             $table->unsignedBigInteger('id_produk');
             $table->foreign('id_produk')->references('id_produk')->on('produks');
             $table->timestamps();

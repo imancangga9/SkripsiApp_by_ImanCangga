@@ -24,10 +24,10 @@
                         <p class="card-text">{{ $packaging->warna_packaging}}</p>
                     @endforeach
                 </div>   
-                {{-- <div class="mb-3">
+                <div class="mb-3">
                     <h5 class="card-title">Foto</h5>
                     @foreach ($packagings as $packaging)
-                        <p class="card-text">{{ $packaging->foto_packaging}}</p>
+                        <p class="card-text" src="/images/{{$packaging->foto_packaging}}"></p>
                     @endforeach
                 </div>  
                 <div class="mb-3">
@@ -35,7 +35,7 @@
                     @foreach ($packagings as $packaging)
                         <p class="card-text">{{ $packaging->status_packaging}}</p>
                     @endforeach
-                </div>                         --}}
+                </div>                        
             </div>
         
     </div>

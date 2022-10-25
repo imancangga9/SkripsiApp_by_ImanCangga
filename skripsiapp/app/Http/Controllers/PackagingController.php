@@ -40,23 +40,24 @@ class PackagingController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            // 'jenispackaging' => 'required',
-            // 'fotopackaging' => 'mimes:jpeg,png,jpg',
+            'jenispackaging' => 'required',
+            'fotopackaging' => 'mimes:jpeg,png,jpg',
             'id_produk' => 'required',
             // 'statusproduk' => 'required',
         ]);
 
-        // $imgName = $request->fotopackaging->getClientOriginalName() . '-' . time() 
-        //                     . '.' . $request->fotopackaging->extension();
-        // $request->fotopackaging->move(public_path('images'), $imgName);
+        $imgName = $request->fotopackaging->getClientOriginalName() . '-' . time() 
+                            . '.' . $request->fotopackaging->extension();
+        $request->fotopackaging->move(public_path('images'), $imgName);
         
          Packaging::create ([
             'jenis_packaging' => $request->jenispackaging,
             'slug' => Str::slug($request->jenispackaging, '-'),
             'warna_packaging' => $request->warnapackaging,
-            // 'status_packaging' => $request->statuspackaging,
-            // 'foto_packaging' =>  $imgName,
             'id_produk' => $request->id_produk,
+            'status_packaging' => $request->statuspackaging,
+            'foto_packaging' =>  $imgName,
+            
         ]);
 
         return redirect('/packaging');
