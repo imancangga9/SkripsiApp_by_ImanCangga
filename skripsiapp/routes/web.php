@@ -48,6 +48,8 @@ Route::get('/packaging', 'PackagingController@packaging');
 Route::post('/packaging', 'PackagingController@store');
 Route::get('/packaging/create', 'PackagingController@create');
 Route::get('/packaging/{slug}', 'PackagingController@show');
+Route::get('/packaging/{id_packaging}/edit', 'PackagingController@edit');
+Route::put('/packaging/{id_packaging}', 'PackagingController@update');
 
 
 Route::get('/master', function(){

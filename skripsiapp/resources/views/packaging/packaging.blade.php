@@ -5,9 +5,10 @@
     <div class="col mx-1 card card-task">
         <div class="card-header d-flex justify-content-between">
             <h5>Packaging</h5>
-            <a href="/packaging/create" class="text-decoration-none">
-                <button class="btn btn-outline-primary text-decoration-none"><i class="fa fa-plus"></i> Edit</button>                               
-            </a>
+            <div class="row">
+                <a class="btn btn-outline-primary" href="/packaging/create">Add</a>
+                <a class="btn btn-outline-primary ml-1" href="/packaging/edit">Edit</a>
+            </div>
             
         </div>
         

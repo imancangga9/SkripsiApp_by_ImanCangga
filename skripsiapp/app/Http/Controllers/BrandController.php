@@ -20,7 +20,7 @@ class BrandController extends Controller
     }
 
     public function show($slug){
-        $produks = Produk::all();
+        $produks = Produk::all()->first();
         
         $brand = Brand::where('slug', $slug)->first();
         // $brand = Brand::find($id_brand);

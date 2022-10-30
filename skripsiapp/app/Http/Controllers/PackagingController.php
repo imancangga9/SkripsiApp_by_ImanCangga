@@ -63,4 +63,36 @@ class PackagingController extends Controller
         return redirect('/packaging');
     }
 
+    public function edit($id_packaging)
+    {        
+        $produks = Produk::all();
+        $packaging = Packaging::find($id_packaging);
+
+        return view('packaging.packaging-edit', compact('packaging', 'produks'));
+    }
+
+    public function update(Request $request, $id_packaging)
+    {
+        $request->validate([
+            'jenispackaging' => 'required',
+            'fotopackaging' => 'mimes:jpeg,png,jpg',
+            'id_produk' => 'required',
+        ]);
+
+        $imgName = $request->fotopackaging->getClientOriginalName() . '-' . time() 
+        . '.' . $request->fotopackaging->extension();
+        $request->fotopackaging->move(public_path('images'), $imgName);
+
+        Produk::find($id_packaging)->update([
+            'jenis_packaging' => $request->jenispackaging,
+            'slug' => Str::slug($request->jenispackaging, '-'),
+            'warna_packaging' => $request->warnapackaging,
+            'id_produk' => $request->id_produk,
+            'status_packaging' => $request->statuspackaging,
+            'foto_packaging' =>  $imgName,
+        ]);
+
+        return redirect('/packaging');
+    }
+
 }

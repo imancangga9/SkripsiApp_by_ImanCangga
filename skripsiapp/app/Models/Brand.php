@@ -15,7 +15,7 @@ class Brand extends Model
 
     protected $table = 'brands';
     
-    // protected $fillable = ['id_brand', 'nama_brand', 'slug', 'updated_at', 'created_at'];
+    protected $fillable = ['id_brand', 'nama_brand', 'slug', 'updated_at', 'created_at'];
 
 
     public function produks()
